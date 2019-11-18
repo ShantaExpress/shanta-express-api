@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
-var mlabDb = "mongodb://kdcdadmin:kdcd%40123@ds141221.mlab.com:41221/ecommerce";
+let config = require('./config/config');
+
 // var localDb = "mongodb://127.0.0.1:27017/ecommerce";
-const mongoURI = mlabDb;
+const mongoURI = config.mongoDbUri;
 // const mongoURI = localDb;
 console.log('connecting to : ', mongoURI);
 mongoose.connect(mongoURI);
